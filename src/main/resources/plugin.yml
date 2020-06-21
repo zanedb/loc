@@ -1,0 +1,22 @@
+name: Loc
+version: 0.0.1
+description: Save locations.
+author: zaned
+main: sh.zane.loc.Loc
+website: https://zane.sh/loc
+api-version: 1.15
+commands:
+  loc:
+    description: View, save, & edit your locations.
+    usage: "Usage: /loc [list|new|edit]"
+    permission: loc.loc
+    permission-message: You don't have permission!
+permissions:
+  loc.loc:
+    description: Allows you to save personal locations.
+    default: true
+  loc.*:
+    description: Allows everything.
+    default: op
+    children:
+      loc.loc: true
